@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 Earth — Geographic Survey
+
+An interactive 3D Earth experience built with Next.js, Three.js, and Framer Motion. Explore a realistic, rotating 3D Earth, scroll through its history, and discover the seven continents with smooth scroll-driven animations.
+
+## Features
+
+- **Interactive 3D Earth** — A realistic, textured Earth rendered with Three.js (via React Three Fiber), draggable and zoomable with orbit controls.
+- **Animated Hero Section** — Staggered text reveal animations powered by Framer Motion.
+- **About Section** — An introduction to Earth with a slide-and-fade image animation.
+- **History Timeline** — A scroll-revealed timeline from Earth's formation to the Cambrian Explosion.
+- **Continents Gallery** — All seven continents with scroll-triggered scale animations.
+- **Starfield Background** — A dynamic, twinkling star background built with `@react-three/drei`.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) — React framework (App Router)
+- [Three.js](https://threejs.org/) — 3D graphics engine
+- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) — React renderer for Three.js
+- [@react-three/drei](https://github.com/pmndrs/drei) — Useful helpers for React Three Fiber
+- [Framer Motion](https://www.framer.com/motion/) — Animation library for React
+- [Tailwind CSS](https://tailwindcss.com/) — Utility-first styling
+- TypeScript
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
 
-```bash
+\`\`\`bash
+npm install
+\`\`\`
+
+Run the development server:
+
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+\`\`\`
+earth-experience/
+├── app/
+│   ├── layout.tsx           # Root layout, fonts, metadata
+│   ├── page.tsx              # Main page assembling all sections
+│   └── globals.css           # Global styles and theme variables
+├── components/
+│   ├── EarthScene.tsx        # 3D Earth rendered with Three.js
+│   ├── HeroOverlay.tsx       # Animated hero text overlay
+│   ├── AboutSection.tsx      # About Earth, with slide-fade image
+│   ├── HistorySection.tsx    # Scroll-revealed history timeline
+│   └── ContinentsSection.tsx # Seven continents gallery
+└── public/
+    └── textures/              # Earth texture imagery
+\`\`\`
 
-## Learn More
+## Imagery Credit
 
-To learn more about Next.js, take a look at the following resources:
+Earth texture imagery courtesy of NASA Blue Marble / NASA Earth Observatory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Emma**
+- Email: emmnqb@gmail.com
+- GitHub: [@Emma-SH](https://github.com/Emma-SH)
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open for personal and educational use.
