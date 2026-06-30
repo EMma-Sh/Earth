@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0c0a09;
+  --foreground: #fafaf9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #44403c #0c0a09;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-mono), monospace;
+}
+
+.font-serif {
+  font-family: var(--font-serif), serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
